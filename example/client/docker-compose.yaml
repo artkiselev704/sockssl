@@ -1,0 +1,12 @@
+name: sockssl-client
+
+services:
+    client:
+        image: sockssl-client
+        restart: always
+        ports:
+            - "1080:1080"
+        environment:
+            - LOG_LEVEL=${LOG_LEVEL}
+            - PASSWORD=${PASSWORD}
+            - SERVER_HOST=${SERVER_HOST}
